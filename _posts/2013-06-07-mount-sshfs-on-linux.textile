@@ -1,0 +1,14 @@
+---
+layout: post
+title: Mount SSHFS on Linux
+---
+As root, execute the following:
+ * apt-get install sshfs
+ * adduser [user] fuse
+ * mkdir /path/to/mount
+ * chown root:fuse /path/to/mount
+
+And as the user [user], execute
+ * sshfs -o idmap=user [remote_user]@[server]:/path/to/remote/folder /path/to/mount
+
+Source: "http://www.howtoforge.com/mounting-remote-directories-with-sshfs-on-ubuntu-11.10":http://www.howtoforge.com/mounting-remote-directories-with-sshfs-on-ubuntu-11.10

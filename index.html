@@ -1,51 +1,11 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Cpollet.github.io : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Cpollet.github.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/cpollet">View on GitHub</a>
-
-          <h1 id="project_title">Cpollet.github.io</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="lorem-ipsum" class="anchor" href="#lorem-ipsum"><span class="octicon octicon-link"></span></a>Lorem ipsum</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem dolor, mattis sed elit lacinia, lacinia blandit justo. Duis pellentesque aliquam lectus, in accumsan sem accumsan porta. Duis mollis, lectus non hendrerit ultrices, nulla lectus luctus sapien, at luctus magna velit vitae mauris. Maecenas velit dolor, ultricies sit amet rutrum eu, porta in odio. Vivamus sodales lacinia leo et porttitor. Vivamus risus urna, cursus sed malesuada eget, rhoncus eget erat. Nam porta tellus vitae purus feugiat, non gravida velit porttitor. Aliquam erat volutpat. Integer urna lectus, tincidunt id feugiat at, malesuada id orci. Nam venenatis mi sed sem euismod molestie. Quisque vel vehicula elit.</p>
-
-<p>Proin sapien sapien, mollis eu volutpat quis, ornare vitae magna. In volutpat in sem vel ullamcorper. Proin in dignissim turpis. Fusce pharetra sapien sapien, in gravida neque rhoncus non. Cras eget iaculis arcu. Etiam pharetra magna ultricies leo scelerisque, vel convallis ligula bibendum. Donec nisi nunc, ullamcorper quis urna eu, lobortis rutrum diam. Nullam in sapien arcu. Mauris et turpis libero. Vestibulum in quam mauris. </p>
-
-<p><a href="https://github.com/mikel/mail">https://github.com/mikel/mail</a></p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
+<ul>
+{% for post in site.posts %}
+ 	<li>
+ 	 	<a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small>
+	</li>
+{% endfor %}
+</ul>

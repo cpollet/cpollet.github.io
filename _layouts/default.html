@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>cpollet.me{% if page.title %}: {{ page.title }}{% endif %}</title>
+	</head>
+
+	<body>
+		<h1>cpollet.me</h1>
+
+		{{ content }}
+
+		<div style="text-align:right">Last generated on {{ site.time | date_to_string }}</div>
+	</body>
+</html>
