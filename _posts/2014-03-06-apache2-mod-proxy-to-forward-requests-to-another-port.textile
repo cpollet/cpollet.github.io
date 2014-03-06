@@ -1,0 +1,18 @@
+---
+layout: post
+title: Use apache2 mod_proxy and mod_proxy_http to forward requests to another port
+---
+First, enable mod proxy and proxy_http:
+
+@a2enmod proxy proxy_http@
+
+Then, add the required configuration to your apache2 config files:
+
+@ProxyPass /app http://example.com:8080/app@
+@ProxyPassReverse /app http://example.com:8080/app@
+
+Don't forget to restart the server :)
+
+Source:
+* "http://www.elao.com/blog/linux/reverse-proxy-apache-no-protocol-handler-was-valid-for-the-url.html":http://www.elao.com/blog/linux/reverse-proxy-apache-no-protocol-handler-was-valid-for-the-url.html
+* "webmasters.stackexchange.com/questions/1469/how-can-i-redirect-port-80-to-a-different-port-with-apache":webmasters.stackexchange.com/questions/1469/how-can-i-redirect-port-80-to-a-different-port-with-apache
