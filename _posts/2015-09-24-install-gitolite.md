@@ -6,6 +6,7 @@ title: Install gitolite
 After installation of Ubuntu 14.04 LTS, copy your local `id_rsa.pub_` file to your server:
 
     local$ scp ~/.ssh/id_rsa.pub git@server:~/yourname.pub
+    root@server$ apt-get install git
     root@server$ adduser git
     root@server$ mv yourname.pub /home/git/yourname.pub
     root@server$ su git
