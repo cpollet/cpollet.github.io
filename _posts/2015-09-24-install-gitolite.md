@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Install Jenkins
+title: Install gitolite
 ---
 
 After installation of Ubuntu 14.04 LTS, copy your local `id_rsa.pub_` file to your server:
