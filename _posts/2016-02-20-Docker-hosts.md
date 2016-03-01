@@ -3,7 +3,7 @@ layout: post
 title: Docker hosts on gandi.net
 ---
 
-# Ubuntu 14.04 LTS, raw Docker
+### Ubuntu 14.04 LTS, raw Docker
 Just follow the instructions at [Docker](https://docs.docker.com/engine/installation/linux/ubuntulinux/):
 
 ```
@@ -19,7 +19,7 @@ $ sudo service docker start
 $ sudo docker run hello-world
 ```
 
-# Debian 8, with Docker Cloud Agent
+### Debian 8, with Docker Cloud Agent
 
 ```
 $ apt-get update

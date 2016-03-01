@@ -3,10 +3,10 @@ layout: post
 title: Docker host on Raspberry Pi (installation from OS X)
 ---
 
-# Download image
+### Download image
 Download linux image from http://blog.hypriot.com/downloads/
 
-# Install it on SD card
+### Install it on SD card
 
 ```
 localhost$ diskutil list
@@ -15,13 +15,13 @@ localhost$ cat hypriot-rpi-yyymmdd-hhmmss.img | pv -s `stat -f %z hypriot-rpi-yy
 ```
 You may beed to install the `pv` tool with something like `bower install pv`)
 
-# Enable internet sharing on your Mac
+### Enable internet sharing on your Mac
 
 1. Open System Preferences
 1. Select Sharing Preference Pane
 1. Enable Internet Sharing with the following settings: Share your connection from: Wi-Fi to computers using Ethernet
 
-# Boot the Raspberry and first login
+### Boot the Raspberry and first login
 
 Install the card, connect the ethernet cable and power up the PI. Then, discover its IP address with (if `nmap` is missing, you can install it via `bower install nmap`)
 
@@ -47,7 +47,7 @@ password: hypriot
 localhost$ ssh root@192.168.2.2
 ```
 
-# Play with docker
+### Play with docker
 
 You should now be all set! To confirm that everything went fine, you can type:
 
