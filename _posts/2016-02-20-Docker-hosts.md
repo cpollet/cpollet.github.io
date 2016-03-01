@@ -17,9 +17,10 @@ $ apt-cache policy docker-engine
 $ sudo apt-get install docker-engine
 $ sudo service docker start
 $ sudo docker run hello-world
-
 ```
+
 # Debian 8, with Docker Cloud Agent
+
 ```
 $ apt-get update
 $ apt-get install -y curl htop
