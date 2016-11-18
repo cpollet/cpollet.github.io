@@ -22,12 +22,6 @@ $ sudo docker run hello-world
 ### Ubuntu 16.04 LTS, raw Docker
 Just follow the instructions at [Docker](https://docs.docker.com/engine/installation/linux/ubuntulinux/).
 
-```
-$ vi /etc/default/docker
-DOCKER_OPTS="-g /somewhere/else/docker/"
-```
-
-
 ### Debian 8, with Docker Cloud Agent
 
 ```
@@ -39,3 +33,21 @@ $ curl -Ls https://get.cloud.docker.com/ | sh -s {yourKey}
 {youKey} comes from Docker Cloud
 
 See as well [Docker Cloud doc](https://docs.docker.com/docker-cloud/tutorials/byoh/).
+
+### Move docker directory, Ubuntu/Debian
+
+```
+$ vi /etc/default/docker
+DOCKER_OPTS="-g /somewhere/else/docker/"
+```
+
+# Stop docker: service docker stop. Verify no docker process is running ps faux
+# Double check docker really isn't running. Take a look at the current docker directory: ls /var/lib/docker/
+# Make a backup - tar -zcC /var/lib docker > /mnt/pd0/var_lib_docker-backup-$(date +%s).tar.gz
+# Move the /var/lib/docker directory to your new partition: mv /var/lib/docker /mnt/pd0/docker
+# Make a symlink: ln -s /mnt/pd0/docker /var/lib/docker
+# Take a peek at the directory structure to make sure it looks like it did before the mv: ls /var/lib/docker/ (note the trailing slash to resolve the symlink)
+# Start docker back up service docker start
+# restart your containers
+
+source: https://github.com/docker/docker/issues/3127
