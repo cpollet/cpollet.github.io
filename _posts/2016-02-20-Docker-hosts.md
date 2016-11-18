@@ -22,6 +22,12 @@ $ sudo docker run hello-world
 ### Ubuntu 16.04 LTS, raw Docker
 Just follow the instructions at [Docker](https://docs.docker.com/engine/installation/linux/ubuntulinux/).
 
+```
+$ vi /etc/default/docker
+DOCKER_OPTS="-g /somewhere/else/docker/"
+```
+
+
 ### Debian 8, with Docker Cloud Agent
 
 ```
